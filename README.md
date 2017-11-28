@@ -19,3 +19,5 @@ Instructions:
 10) Computer opponent may seem hard to beat at first but should be manageable after some practice.
 
 Reference to the history of the pong game: https://en.wikipedia.org/wiki/Pong
+
+The project is still in the development stage and there are many things yet to be implemented.
