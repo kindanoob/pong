@@ -1,7 +1,7 @@
 # pong
 Implementation of the pong game in C++ using SFML
 
-Requirements: 1) C++11, 2) SFML 2.4.2
+Requirements: 1) C++11, 2) SFML 2.3.2
 
 The program was tested on Ubuntu 16.04 LTS Xenial, gcc 5.4.0.
 
