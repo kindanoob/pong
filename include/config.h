@@ -23,7 +23,7 @@ const unsigned int kScoreTextSize = 30;
 const unsigned int kGameOverTextSize = 40;
 const unsigned int kPressAnyKeyTextSize = 25;
 
-const int kMatchWinnerScore = 10;
+const int kMatchWinnerScore = 5;
 
 const int kStartMatchDelay = 750;//in milliseconds
 
