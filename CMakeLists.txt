@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(game_of_life)
+project(pong)
 
 file(GLOB_RECURSE SOURCES src/*.cpp include/*.h)
 file(GLOB_RECURSE RESOURCES resources/fonts/*)
