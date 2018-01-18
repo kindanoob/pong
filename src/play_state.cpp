@@ -115,7 +115,7 @@ void PlayState::CreateScoreText(const sf::Font &font,
     score_text_.setPosition(kOffsetX, kOffsetY / 2);
     std::ostringstream score_text_stringstream;
     score_text_stringstream << "Player " << app->human_score_ << 
-    " : " << app->computer_score_ << " Bot" << std::endl;
+    " : " << app->computer_score_ << " Computer" << std::endl;
     score_text_.setString(score_text_stringstream.str());
 }
 
@@ -138,7 +138,7 @@ void PlayState::UpdateScore(Application *app) {
         reset_duration_ = kResetDuration;
     }
     std::ostringstream score_text_stringstream;
-    score_text_stringstream << "Player " << app->human_score_ << " : " << app->computer_score_ << " Bot" << std::endl;
+    score_text_stringstream << "Player " << app->human_score_ << " : " << app->computer_score_ << " Computer" << std::endl;
     score_text_.setString(score_text_stringstream.str());
     if (std::max(app->human_score_, app->computer_score_) == kMatchWinnerScore) {
         is_initialized_ = false;

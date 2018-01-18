@@ -74,7 +74,7 @@ void GameOverState::Update(double dt, Application *app) {
     std::ostringstream score_text__stringstream;
     score_text__stringstream << "Final score: " << std::endl;
     score_text__stringstream << "Player " << app->human_score_ << 
-    " : " << app->computer_score_ << " Bot" << std::endl;
+    " : " << app->computer_score_ << " Computer" << std::endl;
     score_text_.setString(score_text__stringstream.str());
     sf::FloatRect score_rect = score_text_.getLocalBounds();
     score_text_.setOrigin(score_rect.width / 2, score_rect.height / 2);
