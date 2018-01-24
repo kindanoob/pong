@@ -1,4 +1,5 @@
 # pong
+![pong_screenshot](/resources/sfml_pong.png?raw=true "Pong")
 Implementation of the pong game in C++ using SFML
 
 Requirements: 1) C++11, 2) SFML 2.3.2
