@@ -1,12 +1,10 @@
 #ifndef GAME_OVER_H_
 #define GAME_OVER_H_
 
-#include <SFML/Graphics.hpp>
 #include "game_state.h"
+#include <SFML/Graphics.hpp>
 
 class Application;
-
-
 
 class GameOverState: public GameState {
 public:

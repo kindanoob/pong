@@ -1,12 +1,10 @@
 #ifndef MAIN_MENU_H_
 #define MAIN_MENU_H_
 
-
-#include <SFML/Graphics.hpp>
 #include "game_state.h"
+#include <SFML/Graphics.hpp>
 
 class Application;
-
 
 class MainMenuState: public GameState {
 public:

@@ -1,9 +1,8 @@
 #ifndef BALL_H_
 #define BALL_H_
 
-
-#include <SFML/Graphics.hpp>
 #include "config.h"
+#include <SFML/Graphics.hpp>
 
 enum class CollisionDirection {
     kHorizontal, 

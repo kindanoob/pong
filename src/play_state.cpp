@@ -111,7 +111,8 @@ void PlayState::CreateScoreText(const sf::Font &font,
     const unsigned int text_size, Application *app) {
     score_text_.setFont(font);
     score_text_.setCharacterSize(text_size);
-    score_text_.setColor(sf::Color::Black);
+    score_text_.setOutlineColor(sf::Color::Black);
+    score_text_.setFillColor(sf::Color::Black);
     score_text_.setPosition(kOffsetX, kOffsetY / 2);
     std::ostringstream score_text_stringstream;
     score_text_stringstream << "Player " << app->human_score_ << 
@@ -150,7 +151,8 @@ void PlayState::UpdateScore(Application *app) {
 void PlayState::CreateFpsCountText(const sf::Font &font, const unsigned int text_size, Application *app) {
     fps_count_text_.setFont(font);
     fps_count_text_.setCharacterSize(text_size);
-    fps_count_text_.setColor(sf::Color::Black);
+    fps_count_text_.setOutlineColor(sf::Color::Black);
+    fps_count_text_.setFillColor(sf::Color::Black);
     fps_count_text_.setPosition(kWindowWidth - 2 * kOffsetX, kOffsetY / 2);
     std::ostringstream fps_count_text_stringstream;
     fps_count_text_stringstream << "FPS: " << app->fps_count_ << std::endl;

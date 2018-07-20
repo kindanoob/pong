@@ -1,11 +1,8 @@
 #ifndef DISPLAY_H_
 #define DISPLAY_H_
 
-
-#include <SFML/Graphics.hpp>
-
 #include "config.h"
-
+#include <SFML/Graphics.hpp>
 
 class Display {
 public:

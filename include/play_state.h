@@ -1,15 +1,13 @@
 #ifndef PLAY_STATE_H_
 #define PLAY_STATE_H_
 
+#include "game_state.h"
 #include <list>
 #include <SFML/Graphics.hpp>
-#include "game_state.h"
 
 class Ball;
 class Paddle;
 class Application;
-
-
 
 class PlayState: public GameState {
 public:

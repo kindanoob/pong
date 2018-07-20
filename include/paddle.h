@@ -10,7 +10,6 @@ enum class Player {
     kComputer
 };
 
-
 class Paddle {
 public:
     sf::RectangleShape rect_shape_;

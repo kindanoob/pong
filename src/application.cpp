@@ -1,4 +1,3 @@
-#include <iostream>
 #include "application.h"
 #include "display.h"
 #include "game_state.h"
@@ -6,6 +5,7 @@
 #include "delay_state.h"
 #include "game_over_state.h"
 #include "main_menu_state.h"
+#include <iostream>
 
 
 

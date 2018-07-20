@@ -1,6 +1,6 @@
+#include "display.h"
 #include <iostream>
 #include <new>
-#include "display.h"
 
 
 Display::Display() {

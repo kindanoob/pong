@@ -1,7 +1,7 @@
-#include <sstream>
 #include "application.h"
 #include "display.h"
 #include "game_over_state.h"
+#include <sstream>
 
 
 

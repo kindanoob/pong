@@ -1,9 +1,9 @@
-#include <iostream>
-#include <time.h>
-#include <SFML/System.hpp>
 #include "ball.h"
 #include "paddle.h"
 #include "util.h"
+#include <iostream>
+#include <time.h>
+#include <SFML/System.hpp>
 
 
 Ball::Ball() {

@@ -1,7 +1,7 @@
-#include <iostream>
-#include <new>
-#include <SFML/Graphics.hpp>
 #include "application.h"
+#include <iostream>
+#include <SFML/Graphics.hpp>
+
 
 
 

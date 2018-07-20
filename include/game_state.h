@@ -1,12 +1,9 @@
 #ifndef GAME_STATE_H_
 #define GAME_STATE_H_
 
-
 #include <SFML/Graphics.hpp>
 
-
 class Application;
-
 
 class GameState {
 public:
