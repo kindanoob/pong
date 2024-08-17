@@ -18,21 +18,21 @@ void GameOverState::CreateGameOverFont() {
 void GameOverState::CreateGameOverText(const sf::Font &font, const unsigned int text_size) {
     game_over_text_.setFont(font);
     game_over_text_.setCharacterSize(text_size);
-    game_over_text_.setColor(sf::Color::Black);
+    game_over_text_.setFillColor(sf::Color::Black);
 }
 
 
 void GameOverState::CreateScoreText(const sf::Font &font, const unsigned int text_size) {
     score_text_.setFont(font);
     score_text_.setCharacterSize(text_size);
-    score_text_.setColor(sf::Color::Black);
+    score_text_.setFillColor(sf::Color::Black);
     score_text_.setPosition(kWindowWidth / 2, kWindowHeight / 2 + 50);
 }
 
 void GameOverState::CreatePressAnyKeyText(const sf::Font &font, const unsigned int text_size) {
     press_any_key_text_.setFont(font);
     press_any_key_text_.setCharacterSize(text_size);
-    press_any_key_text_.setColor(sf::Color::Black);
+    press_any_key_text_.setFillColor(sf::Color::Black);
     press_any_key_text_.setPosition(kWindowWidth / 2, kWindowHeight / 2 + 125);
     press_any_key_text_.setString("Press Enter to go to the main menu.");
 }
