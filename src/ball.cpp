@@ -1,6 +1,7 @@
 #include "ball.h"
 #include "paddle.h"
 #include "util.h"
+#include <cmath>
 #include <iostream>
 #include <time.h>
 #include <SFML/System.hpp>
@@ -19,17 +20,17 @@ Ball::Ball() {
 
 void Ball::Update(double dt, Paddle *player_paddle, Paddle *bot_paddle) {
     if (time_after_spawn_ < 1000) {
-        if (fabs(dx_) < kBallDx) {
-            double sign_dx_ = dx_ / fabs(dx_);
+        if (std::fabs(dx_) < kBallDx) {
+            double sign_dx_ = dx_ / std::fabs(dx_);
             dx_ += sign_dx_ * dt / 2000;
-            if(fabs(dx_) > kBallDx){
+            if(std::fabs(dx_) > kBallDx){
                 dx_ = sign_dx_ * kBallDx;
             }
         }
-        if (fabs(dy_) < kBallDy) {
-            double sign_dy_ = dy_ / fabs(dy_);
+        if (std::fabs(dy_) < kBallDy) {
+            double sign_dy_ = dy_ / std::fabs(dy_);
             dy_ += sign_dy_ * dt / 2000;
-            if (fabs(dy_) > kBallDy) {
+            if (std::fabs(dy_) > kBallDy) {
                 dy_ = sign_dy_ * kBallDy;
             }
         }
@@ -85,7 +86,7 @@ void Ball::CheckCollisionWithPaddle(Paddle *paddle, CollisionDirection dir) {
                     int r_squared = kBallRadius * kBallRadius;
                     if ((dist_squared_top_right <= r_squared) || 
                         (dist_squared_bottom_right <= r_squared) || 
-                        (fabs(y_ - paddle->y_) <= kPaddleHeight / 2)) {
+                        (std::fabs(y_ - paddle->y_) <= kPaddleHeight / 2)) {
                         x_ = paddle->x_ + kPaddleWidth / 2 + dist_front;
                         dx_ *= -1;
                     }
@@ -98,7 +99,7 @@ void Ball::CheckCollisionWithPaddle(Paddle *paddle, CollisionDirection dir) {
                 int r_squared = kBallRadius * kBallRadius;
                 if ((dist_squared_top_left <= r_squared) || 
                     (dist_squared_top_right <= r_squared) || 
-                    (fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
+                    (std::fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
                     y_ = paddle->y_ - kPaddleHeight / 2 - dist_top;
                     dy_ *= -1;
                 }
@@ -109,7 +110,7 @@ void Ball::CheckCollisionWithPaddle(Paddle *paddle, CollisionDirection dir) {
                 int r_squared = kBallRadius * kBallRadius;
                 if ((dist_squared_bottom_left <= r_squared) || 
                     (dist_squared_bottom_right <= r_squared) || 
-                    (fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
+                    (std::fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
                     y_ = paddle->y_ + kPaddleHeight / 2 + dist_bottom;
                     dy_ *= -1;
                 }
@@ -125,7 +126,7 @@ void Ball::CheckCollisionWithPaddle(Paddle *paddle, CollisionDirection dir) {
                 int r_squared = kBallRadius * kBallRadius;
                 if ((dist_squared_top_left <= r_squared) || 
                     (dist_squared_bottom_left <= r_squared) || 
-                    (fabs(y_ - paddle->y_) <= kPaddleHeight / 2)) {
+                    (std::fabs(y_ - paddle->y_) <= kPaddleHeight / 2)) {
                     x_ = paddle->x_ - kPaddleWidth / 2 - dist_front;
                     dx_ *= -1;
                 }
@@ -138,7 +139,7 @@ void Ball::CheckCollisionWithPaddle(Paddle *paddle, CollisionDirection dir) {
                 int r_squared = kBallRadius * kBallRadius;
                 if ((dist_squared_top_left <= r_squared) || 
                     (dist_squared_top_right <= r_squared) || 
-                    (fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
+                    (std::fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
                     y_ = paddle->y_ - kPaddleHeight / 2 - dist_top;
                     dy_ *= -1;
                 }
@@ -149,7 +150,7 @@ void Ball::CheckCollisionWithPaddle(Paddle *paddle, CollisionDirection dir) {
                 int r_squared = kBallRadius * kBallRadius;
                 if ((dist_squared_bottom_left <= r_squared) || 
                     (dist_squared_bottom_right <= r_squared) || 
-                    (fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
+                    (std::fabs(x_ - paddle->x_) <= kPaddleWidth / 2)) {
                     y_ = paddle->y_ + kPaddleHeight / 2 + dist_bottom;
                     dy_ *= -1;
                 }
